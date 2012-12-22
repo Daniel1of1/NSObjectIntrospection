@@ -10,4 +10,12 @@
 
 @implementation DemoObject
 
+@synthesize aString;
+@synthesize aNumber;
+@synthesize aFloat;
+@synthesize aLeafObject;
+@synthesize arrayOfLeaves;
+@synthesize dictOfLeaves;
+
+
 @end
