@@ -22,7 +22,6 @@
 		18118B15168529050083B7AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18118AEF168529040083B7AB /* UIKit.framework */; };
 		18118B16168529050083B7AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18118AF1168529040083B7AB /* Foundation.framework */; };
 		18118B1E168529050083B7AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18118B1C168529050083B7AB /* InfoPlist.strings */; };
-		18118B21168529050083B7AB /* NSObjectIntrospectionDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18118B20168529050083B7AB /* NSObjectIntrospectionDemoTests.m */; };
 		18118B3216853E0C0083B7AB /* NSObject+introspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 18118B3116853E0C0083B7AB /* NSObject+introspect.m */; };
 		18118B3316853E0C0083B7AB /* NSObject+introspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 18118B3116853E0C0083B7AB /* NSObject+introspect.m */; };
 		18118B3A1685411C0083B7AB /* DemoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 18118B391685411C0083B7AB /* DemoObject.m */; };
@@ -63,8 +62,6 @@
 		18118B13168529050083B7AB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		18118B1B168529050083B7AB /* NSObjectIntrospectionDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSObjectIntrospectionDemoTests-Info.plist"; sourceTree = "<group>"; };
 		18118B1D168529050083B7AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		18118B1F168529050083B7AB /* NSObjectIntrospectionDemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSObjectIntrospectionDemoTests.h; sourceTree = "<group>"; };
-		18118B20168529050083B7AB /* NSObjectIntrospectionDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSObjectIntrospectionDemoTests.m; sourceTree = "<group>"; };
 		18118B3016853E0C0083B7AB /* NSObject+introspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+introspect.h"; sourceTree = "<group>"; };
 		18118B3116853E0C0083B7AB /* NSObject+introspect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+introspect.m"; sourceTree = "<group>"; };
 		18118B381685411C0083B7AB /* DemoObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoObject.h; sourceTree = "<group>"; };
@@ -164,8 +161,6 @@
 		18118B19168529050083B7AB /* NSObjectIntrospectionDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				18118B1F168529050083B7AB /* NSObjectIntrospectionDemoTests.h */,
-				18118B20168529050083B7AB /* NSObjectIntrospectionDemoTests.m */,
 				18118B1A168529050083B7AB /* Supporting Files */,
 				18118B41168541760083B7AB /* NSObject+IntrospectTests.h */,
 				18118B42168541760083B7AB /* NSObject+IntrospectTests.m */,
@@ -314,7 +309,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18118B21168529050083B7AB /* NSObjectIntrospectionDemoTests.m in Sources */,
 				18118B3316853E0C0083B7AB /* NSObject+introspect.m in Sources */,
 				18118B3B1685411C0083B7AB /* DemoObject.m in Sources */,
 				18118B401685413E0083B7AB /* DemoLeafObject.m in Sources */,
