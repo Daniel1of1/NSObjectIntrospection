@@ -17,5 +17,13 @@
 @synthesize arrayOfLeaves;
 @synthesize dictOfLeaves;
 
+-(id)init{
+    
+    if (self==[super init]) {
+        anIvarString=@"anIvarString";
+    }
+
+    return self;
+}
 
 @end

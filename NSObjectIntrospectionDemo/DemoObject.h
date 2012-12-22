@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "DemoLeafObject.h"
 
-@interface DemoObject : NSObject
+@interface DemoObject : NSObject {
+    NSString *anIvarString;
+}
 
 @property (nonatomic, strong) NSString *aString;
 @property (nonatomic, strong) NSNumber *aNumber;
@@ -17,5 +19,6 @@
 @property (nonatomic, strong) DemoLeafObject *aLeafObject;
 @property (nonatomic, strong) NSArray *arrayOfLeaves;
 @property (nonatomic, retain) NSDictionary *dictOfLeaves;
+
 
 @end
