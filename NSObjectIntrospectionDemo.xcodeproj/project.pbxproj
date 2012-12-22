@@ -25,6 +25,10 @@
 		18118B21168529050083B7AB /* NSObjectIntrospectionDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18118B20168529050083B7AB /* NSObjectIntrospectionDemoTests.m */; };
 		18118B3216853E0C0083B7AB /* NSObject+introspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 18118B3116853E0C0083B7AB /* NSObject+introspect.m */; };
 		18118B3316853E0C0083B7AB /* NSObject+introspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 18118B3116853E0C0083B7AB /* NSObject+introspect.m */; };
+		18118B3A1685411C0083B7AB /* DemoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 18118B391685411C0083B7AB /* DemoObject.m */; };
+		18118B3B1685411C0083B7AB /* DemoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 18118B391685411C0083B7AB /* DemoObject.m */; };
+		18118B3F1685413E0083B7AB /* DemoLeafObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 18118B3E1685413E0083B7AB /* DemoLeafObject.m */; };
+		18118B401685413E0083B7AB /* DemoLeafObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 18118B3E1685413E0083B7AB /* DemoLeafObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +66,10 @@
 		18118B20168529050083B7AB /* NSObjectIntrospectionDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSObjectIntrospectionDemoTests.m; sourceTree = "<group>"; };
 		18118B3016853E0C0083B7AB /* NSObject+introspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+introspect.h"; sourceTree = "<group>"; };
 		18118B3116853E0C0083B7AB /* NSObject+introspect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+introspect.m"; sourceTree = "<group>"; };
+		18118B381685411C0083B7AB /* DemoObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoObject.h; sourceTree = "<group>"; };
+		18118B391685411C0083B7AB /* DemoObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoObject.m; sourceTree = "<group>"; };
+		18118B3D1685413E0083B7AB /* DemoLeafObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoLeafObject.h; sourceTree = "<group>"; };
+		18118B3E1685413E0083B7AB /* DemoLeafObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoLeafObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +136,10 @@
 				18118B08168529050083B7AB /* ViewController.m */,
 				18118B0A168529050083B7AB /* ViewController.xib */,
 				18118AF6168529040083B7AB /* Supporting Files */,
+				18118B381685411C0083B7AB /* DemoObject.h */,
+				18118B391685411C0083B7AB /* DemoObject.m */,
+				18118B3D1685413E0083B7AB /* DemoLeafObject.h */,
+				18118B3E1685413E0083B7AB /* DemoLeafObject.m */,
 			);
 			path = NSObjectIntrospectionDemo;
 			sourceTree = "<group>";
@@ -288,6 +300,8 @@
 				18118B00168529050083B7AB /* AppDelegate.m in Sources */,
 				18118B09168529050083B7AB /* ViewController.m in Sources */,
 				18118B3216853E0C0083B7AB /* NSObject+introspect.m in Sources */,
+				18118B3A1685411C0083B7AB /* DemoObject.m in Sources */,
+				18118B3F1685413E0083B7AB /* DemoLeafObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +311,8 @@
 			files = (
 				18118B21168529050083B7AB /* NSObjectIntrospectionDemoTests.m in Sources */,
 				18118B3316853E0C0083B7AB /* NSObject+introspect.m in Sources */,
+				18118B3B1685411C0083B7AB /* DemoObject.m in Sources */,
+				18118B401685413E0083B7AB /* DemoLeafObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +479,7 @@
 				18118B26168529050083B7AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18118B27168529050083B7AB /* Build configuration list for PBXNativeTarget "NSObjectIntrospectionDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +488,7 @@
 				18118B29168529050083B7AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
