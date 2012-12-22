@@ -23,6 +23,8 @@
 		18118B16168529050083B7AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18118AF1168529040083B7AB /* Foundation.framework */; };
 		18118B1E168529050083B7AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18118B1C168529050083B7AB /* InfoPlist.strings */; };
 		18118B21168529050083B7AB /* NSObjectIntrospectionDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18118B20168529050083B7AB /* NSObjectIntrospectionDemoTests.m */; };
+		18118B2D16853D4D0083B7AB /* NSObject+introspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 18118B2C16853D4D0083B7AB /* NSObject+introspect.m */; };
+		18118B2E16853D4D0083B7AB /* NSObject+introspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 18118B2C16853D4D0083B7AB /* NSObject+introspect.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		18118B1D168529050083B7AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		18118B1F168529050083B7AB /* NSObjectIntrospectionDemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSObjectIntrospectionDemoTests.h; sourceTree = "<group>"; };
 		18118B20168529050083B7AB /* NSObjectIntrospectionDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSObjectIntrospectionDemoTests.m; sourceTree = "<group>"; };
+		18118B2B16853D4D0083B7AB /* NSObject+introspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+introspect.h"; sourceTree = "<group>"; };
+		18118B2C16853D4D0083B7AB /* NSObject+introspect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+introspect.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 		18118AE0168529040083B7AB = {
 			isa = PBXGroup;
 			children = (
+				18118B2A16853D4D0083B7AB /* NSObject+Introspect */,
 				18118AF5168529040083B7AB /* NSObjectIntrospectionDemo */,
 				18118B19168529050083B7AB /* NSObjectIntrospectionDemoTests */,
 				18118AEE168529040083B7AB /* Frameworks */,
@@ -158,6 +163,15 @@
 				18118B1C168529050083B7AB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18118B2A16853D4D0083B7AB /* NSObject+Introspect */ = {
+			isa = PBXGroup;
+			children = (
+				18118B2B16853D4D0083B7AB /* NSObject+introspect.h */,
+				18118B2C16853D4D0083B7AB /* NSObject+introspect.m */,
+			);
+			path = "NSObject+Introspect";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +287,7 @@
 				18118AFC168529040083B7AB /* main.m in Sources */,
 				18118B00168529050083B7AB /* AppDelegate.m in Sources */,
 				18118B09168529050083B7AB /* ViewController.m in Sources */,
+				18118B2D16853D4D0083B7AB /* NSObject+introspect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18118B21168529050083B7AB /* NSObjectIntrospectionDemoTests.m in Sources */,
+				18118B2E16853D4D0083B7AB /* NSObject+introspect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
