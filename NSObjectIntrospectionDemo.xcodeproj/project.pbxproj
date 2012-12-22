@@ -29,6 +29,7 @@
 		18118B3B1685411C0083B7AB /* DemoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 18118B391685411C0083B7AB /* DemoObject.m */; };
 		18118B3F1685413E0083B7AB /* DemoLeafObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 18118B3E1685413E0083B7AB /* DemoLeafObject.m */; };
 		18118B401685413E0083B7AB /* DemoLeafObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 18118B3E1685413E0083B7AB /* DemoLeafObject.m */; };
+		18118B43168541760083B7AB /* NSObject+IntrospectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18118B42168541760083B7AB /* NSObject+IntrospectTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		18118B391685411C0083B7AB /* DemoObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoObject.m; sourceTree = "<group>"; };
 		18118B3D1685413E0083B7AB /* DemoLeafObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoLeafObject.h; sourceTree = "<group>"; };
 		18118B3E1685413E0083B7AB /* DemoLeafObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoLeafObject.m; sourceTree = "<group>"; };
+		18118B41168541760083B7AB /* NSObject+IntrospectTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+IntrospectTests.h"; sourceTree = "<group>"; };
+		18118B42168541760083B7AB /* NSObject+IntrospectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+IntrospectTests.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +167,8 @@
 				18118B1F168529050083B7AB /* NSObjectIntrospectionDemoTests.h */,
 				18118B20168529050083B7AB /* NSObjectIntrospectionDemoTests.m */,
 				18118B1A168529050083B7AB /* Supporting Files */,
+				18118B41168541760083B7AB /* NSObject+IntrospectTests.h */,
+				18118B42168541760083B7AB /* NSObject+IntrospectTests.m */,
 			);
 			path = NSObjectIntrospectionDemoTests;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 				18118B3316853E0C0083B7AB /* NSObject+introspect.m in Sources */,
 				18118B3B1685411C0083B7AB /* DemoObject.m in Sources */,
 				18118B401685413E0083B7AB /* DemoLeafObject.m in Sources */,
+				18118B43168541760083B7AB /* NSObject+IntrospectTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
