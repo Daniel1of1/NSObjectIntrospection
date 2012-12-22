@@ -70,9 +70,8 @@
     
     for (int i=0; i<count; i++) {
         Method method = methods[i];
-        const char *methodName = method_getName(method);
-        NSString *methodNameString = [NSString stringWithUTF8String:methodName];
-        SEL selector = NSSelectorFromString(methodNameString);
+        SEL selector = method_getName(method);
+        NSString *methodNameString = NSStringFromSelector(selector);
         
         if (selector) {
             [dict setValue:methodNameString forKey:methodNameString];
