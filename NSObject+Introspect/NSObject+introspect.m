@@ -74,7 +74,7 @@
         NSString *methodNameString = NSStringFromSelector(selector);
         
         if (selector) {
-            [dict setValue:methodNameString forKey:methodNameString];
+            [dict setValue:methodNameString forKey:methodNameString]; //set string as value instead of selector, to retrieve use NSSelectorFromString()
         }
     }
     
