@@ -54,8 +54,6 @@
         else {
             [dict setValue:[NSNull null] forKey:ivarNameString];
         }
-        //const char * ivarTypes = ivar_getTypeEncoding(ivars[i]);
-        //[ivarArray addObject:[NSString  stringWithFormat:@"%s atrributes:%s",ivarName,ivarTypes]];
     }
 
     free(ivars);
