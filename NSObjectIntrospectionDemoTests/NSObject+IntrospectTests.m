@@ -51,11 +51,8 @@
     @"arrayOfLeaves" : [demoObj valueForKey:@"arrayOfLeaves"],
     @"dictOfLeaves" : [demoObj valueForKey:@"dictOfLeaves"]
     };
-    
-    NSLog(@"%@",propsDict.description);
-    NSLog(@"%@",correctDictionary.description);
-    
-    STAssertTrue([propsDict isEqualToDictionary:correctDictionary] , @"propertiesDict should return correct dictionary");
+
+    STAssertTrue([propsDict isEqualToDictionary:correctDictionary] , @"propertiesDict should return correct dictionary it looks like this %@\n it should be this %@",propsDict.description,correctDictionary.description);
 
 }
 
