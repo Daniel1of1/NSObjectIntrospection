@@ -29,7 +29,7 @@
     [super tearDown];
 }
 
--(void)testPropertiesDictSetsCorrectDictionary{
+-(void)testPropertiesDictReturnsCorrectDictionary{
     
     demoObj.aString=@"some string value";
     demoObj.aFloat=8;
@@ -57,7 +57,7 @@
 }
 
 
--(void)testIVarsDictSetsCorrectDictionary{
+-(void)testIVarsDictReturnsCorrectDictionary{
     demoObj.aString=@"some string value";
     demoObj.aFloat=8;
     demoObj.aNumber=[NSNumber numberWithDouble:M_PI];
