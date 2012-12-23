@@ -111,4 +111,64 @@
     
 }
 
+-(void)testObjectIntrospectDictionaryReturnsCorrectDictionary{
+    demoObj.aString=@"some string value";
+    demoObj.aFloat=8;
+    demoObj.aNumber=[NSNumber numberWithDouble:M_PI];
+    demoObj.aLeafObject=[[DemoLeafObject alloc] init];
+    DemoLeafObject *leaf1=[[DemoLeafObject alloc] init];
+    DemoLeafObject *leaf2=[[DemoLeafObject alloc] init];
+    DemoLeafObject *leaf3=[[DemoLeafObject alloc] init];
+    demoObj.arrayOfLeaves=[NSArray arrayWithObjects:leaf1, leaf2, leaf3,@"another string value", nil];
+    demoObj.dictOfLeaves=[NSDictionary dictionaryWithObjects:demoObj.arrayOfLeaves forKeys:[NSArray arrayWithObjects:@"key1",@"key2",@"key3",@"key4", nil]];
+    
+    NSDictionary *correctPropsDictionary=@{
+    @"aString" : [demoObj valueForKey:@"aString"],
+    @"aNumber" : [demoObj valueForKey:@"aNumber"],
+    @"aFloat" : [demoObj valueForKey:@"aFloat"],
+    @"aLeafObject" : [demoObj valueForKey:@"aLeafObject"],
+    @"arrayOfLeaves" : [demoObj valueForKey:@"arrayOfLeaves"],
+    @"dictOfLeaves" : [demoObj valueForKey:@"dictOfLeaves"]
+    };
+    
+    NSDictionary *correcIVarstDictionary=@{
+    @"anIvarString" : [demoObj valueForKey:@"anIvarString"],
+    @"aString" : [demoObj valueForKey:@"aString"],
+    @"aNumber" : [demoObj valueForKey:@"aNumber"],
+    @"aFloat" : [demoObj valueForKey:@"aFloat"],
+    @"aLeafObject" : [demoObj valueForKey:@"aLeafObject"],
+    @"arrayOfLeaves" : [demoObj valueForKey:@"arrayOfLeaves"],
+    @"dictOfLeaves" : [demoObj valueForKey:@"dictOfLeaves"]
+    };
+
+    NSDictionary *correctMethodsDictionary=@{
+    //@".cxx_destruct" : @".cxx_destruct",
+    @"aDeclaredMethod" : @"aDeclaredMethod",
+    @"aFloat" : @"aFloat",
+    @"aLeafObject" : @"aLeafObject",
+    @"aNumber" : @"aNumber",
+    @"aString" : @"aString",
+    @"anUnDeclaredMethod" : @"anUnDeclaredMethod",
+    @"arrayOfLeaves" : @"arrayOfLeaves",
+    @"dictOfLeaves" : @"dictOfLeaves",
+    @"init" : @"init",
+    @"setAFloat:" : @"setAFloat:",
+    @"setALeafObject:" : @"setALeafObject:",
+    @"setANumber:" : @"setANumber:",
+    @"setAString:" : @"setAString:",
+    @"setArrayOfLeaves:" : @"setArrayOfLeaves:",
+    @"setDictOfLeaves:" : @"setDictOfLeaves:",
+    };
+
+    
+    NSArray *keys=[[NSArray alloc] initWithObjects:@"properties",@"iVars",@"methods",nil];
+    
+    NSDictionary *objectIntrospectDict=[demoObj objectIntrospectDictionary];
+    
+    NSDictionary *correctDictionary=[NSDictionary dictionaryWithObjects:@[correctPropsDictionary, correcIVarstDictionary,correctMethodsDictionary] forKeys:keys];
+    
+    STAssertTrue([objectIntrospectDict isEqualToDictionary:correctDictionary], @"objectIntrospectDict should return correct dictionary it looks like this %@\n it should be this %@",objectIntrospectDict.description,correctDictionary.description);
+
+}
+
 @end
