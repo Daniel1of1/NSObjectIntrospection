@@ -74,7 +74,6 @@ It exposes 4 methods:
 #import "NSObject+Introspection.h"
 #import "SomeObject.h"
 ...
-
 SomeObject *someObject=[[SomeObject alloc] init];
 
 NSDictionary *propsDict=[someObject propertiesDict];
