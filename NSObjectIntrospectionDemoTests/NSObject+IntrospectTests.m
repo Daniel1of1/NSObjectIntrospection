@@ -80,7 +80,7 @@
     @"dictOfLeaves" : [demoObj valueForKey:@"dictOfLeaves"]
     };
     
-    STAssertTrue([iVarsDict isEqualToDictionary:correctDictionary] , @"propertiesDict should return correct dictionary it looks like this %@\n it should be this %@",iVarsDict.description,correctDictionary.description);
+    STAssertTrue([iVarsDict isEqualToDictionary:correctDictionary] , @"iVarsDict should return correct dictionary it looks like this %@\n it should be this %@",iVarsDict.description,correctDictionary.description);
 
 }
 
