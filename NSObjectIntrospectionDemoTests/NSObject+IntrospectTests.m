@@ -84,5 +84,31 @@
 
 }
 
+-(void)testMethodsDictReturnsCorrectDictionary{
+    
+    NSDictionary *methodsDict=[demoObj methodsDict];
+    
+    NSDictionary *correctDictionary=@{
+    //@".cxx_destruct" : @".cxx_destruct",
+    @"aDeclaredMethod" : @"aDeclaredMethod",
+    @"aFloat" : @"aFloat",
+    @"aLeafObject" : @"aLeafObject",
+    @"aNumber" : @"aNumber",
+    @"aString" : @"aString",
+    @"anUnDeclaredMethod" : @"anUnDeclaredMethod",
+    @"arrayOfLeaves" : @"arrayOfLeaves",
+    @"dictOfLeaves" : @"dictOfLeaves",
+    @"init" : @"init",
+    @"setAFloat:" : @"setAFloat:",
+    @"setALeafObject:" : @"setALeafObject:",
+    @"setANumber:" : @"setANumber:",
+    @"setAString:" : @"setAString:",
+    @"setArrayOfLeaves:" : @"setArrayOfLeaves:",
+    @"setDictOfLeaves:" : @"setDictOfLeaves:",
+    };
+    
+    STAssertTrue([methodsDict isEqualToDictionary:correctDictionary], @"methodsDict should return correct dictionary it looks like this %@\n it should be this %@",methodsDict.description,correctDictionary.description);
+    
+}
 
 @end
