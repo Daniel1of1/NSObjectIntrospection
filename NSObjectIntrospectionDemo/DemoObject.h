@@ -20,5 +20,6 @@
 @property (nonatomic, strong) NSArray *arrayOfLeaves;
 @property (nonatomic, retain) NSDictionary *dictOfLeaves;
 
+-(void)aDeclaredMethod;
 
 @end

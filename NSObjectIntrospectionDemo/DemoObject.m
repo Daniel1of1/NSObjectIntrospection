@@ -26,4 +26,12 @@
     return self;
 }
 
+-(void)aDeclaredMethod{
+   NSLog(@"aDeclaredMethod was called");
+}
+
+-(void)anUnDeclaredMethod{
+    NSLog(@"anUnDeclaredMethod was called");
+}
+
 @end
