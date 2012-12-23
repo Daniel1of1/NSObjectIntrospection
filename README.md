@@ -2,7 +2,7 @@ NSObjectIntrospection
 =====================
 
 A category on NSObject to allow for runtime introspection.
-It allows you ti generate a dictionary with key value pairs of an objects properties.
+It allows you to generate a dictionary with key value pairs of an objects properties.
 
 ##Prerequisites
 - These exensions use ARC; Hence ios4.0+
@@ -33,7 +33,8 @@ It exposes 4 methods:
 ###Usage notes
 - any property or iVar that is `nil` will be an `[NSNull null]` value for it's corresponding key.
 
-##Example
+##Example  
+SomeObject.h
 ```
 //SomeObject.h
 #import <Foundation/Foundation.h>
@@ -47,6 +48,7 @@ It exposes 4 methods:
 @property (nonatomic, strong) SomeOtherObject *someOtherObject;
 ```
 
+SomeObject.m
 ```
 //SomeObject.m
 #import "SomeObject.h"
@@ -69,8 +71,8 @@ It exposes 4 methods:
 }
 ```
 
+anywhere in your code
 ```
-//anywhere in your code
 #import "NSObject+Introspection.h"
 #import "SomeObject.h"
 ...
@@ -81,15 +83,12 @@ NSDictionary *propsDict=[someObject propertiesDict];
 NSLog (@"%@",propsDict.description);
 ```
 
+log output
 ```
-//log output
-
 {
     someOtherObject =  "<someOtherObject: 0x765fe50>"; //the dictionary contains the actual object instance
     someString = "a string which is a property of our object";
 }
-
-
 ```
 
 
