@@ -68,7 +68,7 @@
     demoObj.arrayOfLeaves=[NSArray arrayWithObjects:leaf1, leaf2, leaf3,@"another string value", nil];
     demoObj.dictOfLeaves=[NSDictionary dictionaryWithObjects:demoObj.arrayOfLeaves forKeys:[NSArray arrayWithObjects:@"key1",@"key2",@"key3",@"key4", nil]];
     
-    NSDictionary *propsDict=[demoObj iVarsDict];
+    NSDictionary *iVarsDict=[demoObj iVarsDict];
     
     NSDictionary *correctDictionary=@{
     @"anIvarString" : [demoObj valueForKey:@"anIvarString"],
@@ -80,7 +80,7 @@
     @"dictOfLeaves" : [demoObj valueForKey:@"dictOfLeaves"]
     };
     
-    STAssertTrue([propsDict isEqualToDictionary:correctDictionary] , @"propertiesDict should return correct dictionary it looks like this %@\n it should be this %@",propsDict.description,correctDictionary.description);
+    STAssertTrue([iVarsDict isEqualToDictionary:correctDictionary] , @"propertiesDict should return correct dictionary it looks like this %@\n it should be this %@",iVarsDict.description,correctDictionary.description);
 
 }
 
