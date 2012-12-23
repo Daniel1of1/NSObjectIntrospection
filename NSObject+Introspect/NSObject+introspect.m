@@ -73,6 +73,10 @@
         SEL selector = method_getName(method);
         NSString *methodNameString = NSStringFromSelector(selector);
         
+        if ([methodNameString isEqualToString:@".cxx_destruct"]) {
+            continue; //all NSObjects have this method, clutters the dictionary
+        }
+        
         if (selector) {
             [dict setValue:methodNameString forKey:methodNameString]; //set string as value instead of selector, to retrieve use NSSelectorFromString()
         }
