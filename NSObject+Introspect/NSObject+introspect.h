@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (introspect)
+@interface NSObject (DHCIntrospect)
 
 -(NSDictionary*)propertiesDict;
 

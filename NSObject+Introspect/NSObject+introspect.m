@@ -9,7 +9,7 @@
 #import "NSObject+introspect.h"
 #import <objc/runtime.h>
 
-@implementation NSObject (introspect)
+@implementation NSObject (DHCIntrospect)
 
 -(NSDictionary*) propertiesDict {
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
