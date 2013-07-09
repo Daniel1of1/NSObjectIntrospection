@@ -89,10 +89,11 @@
 }
 
 -(NSDictionary *)objectIntrospectDictionary{
-    NSArray *obs=[[NSArray alloc] initWithObjects:[self propertiesDict],[self iVarsDict],[self methodsDict], nil];
-    NSArray *keys=[[NSArray alloc] initWithObjects:@"properties",@"iVars",@"methods",nil];
-    
-    NSDictionary *dict=[NSDictionary dictionaryWithObjects:obs forKeys:keys];
+
+    NSDictionary *dict=@{@"properties" : [self propertiesDict],
+                         @"iVars" : [self iVarsDict],
+                         @"methods" : [self methodsDict]
+                         };
             
     return dict;
 }
