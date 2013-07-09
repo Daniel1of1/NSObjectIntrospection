@@ -14,11 +14,11 @@
 -(NSDictionary*) propertiesDict {
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     
-    unsigned int outCount;
+    NSUInteger outCount;
     
     objc_property_t *properties = class_copyPropertyList([self class], &outCount);
     
-    for(int i = 0; i < outCount; i++) {
+    for(NSInteger i = 0; i < outCount; i++) {
         objc_property_t property = properties[i];
         const char *propName = property_getName(property);
         NSString *propertyNameString = [NSString stringWithUTF8String:propName];
@@ -38,10 +38,11 @@
 
 -(NSDictionary *)iVarsDict{
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-    unsigned int outCount;
+    
+    NSUInteger outCount;
 
     Ivar* ivars = class_copyIvarList([self class], &outCount);
-    for (int i = 0; i < outCount ; i++){
+    for (NSInteger i = 0; i < outCount ; i++){
         Ivar ivar=ivars[i];
         const char* ivarName = ivar_getName(ivar);
         NSString *ivarNameString = [NSString stringWithUTF8String:ivarName];
@@ -61,14 +62,14 @@
     return dict;
 }
 
--(NSDictionary *)methodsDict{
-    unsigned int count;
+-(NSDictionary *)methodsDict{    
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     
-    NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:0];
+    NSUInteger outCount;
     
-    Method* methods = class_copyMethodList([self class], &count);
+    Method* methods = class_copyMethodList([self class], &outCount);
     
-    for (int i=0; i<count; i++) {
+    for (NSInteger i=0; i<outCount; i++) {
         Method method = methods[i];
         SEL selector = method_getName(method);
         NSString *methodNameString = NSStringFromSelector(selector);
