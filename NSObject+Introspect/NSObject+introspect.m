@@ -93,9 +93,7 @@
     NSArray *keys=[[NSArray alloc] initWithObjects:@"properties",@"iVars",@"methods",nil];
     
     NSDictionary *dict=[NSDictionary dictionaryWithObjects:obs forKeys:keys];
-    
-    NSLog(@"%@",dict.description);
-        
+            
     return dict;
 }
 
