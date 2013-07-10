@@ -10,12 +10,16 @@
 
 @interface NSObject (DHCIntrospect)
 
--(NSDictionary*)propertiesDict;
+-(NSDictionary *)propertiesDict __attribute((deprecated("use dhcPropertiesDict")));
+-(NSDictionary *)dhc_propertiesDict;
 
--(NSDictionary *)iVarsDict;
+-(NSDictionary *)iVarsDict __attribute((deprecated("use dhcIVarsDict")));
+-(NSDictionary *)dhc_iVarsDict;
 
--(NSDictionary *)methodsDict;
+-(NSDictionary *)methodsDict __attribute((deprecated("use dhcMethodsDict")));
+-(NSDictionary *)dhc_methodsDict;
 
--(NSDictionary *)objectIntrospectDictionary;
+-(NSDictionary *)objectIntrospectDictionary __attribute((deprecated("use dhcObjectIntrospectDictionary")));
+-(NSDictionary *)dhc_objectIntrospectDictionary;
 
 @end
