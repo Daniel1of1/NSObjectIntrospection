@@ -11,7 +11,11 @@
 
 @implementation NSObject (DHCIntrospect)
 
--(NSDictionary*) propertiesDict {
+-(NSDictionary*)propertiesDict {
+   return [self dhc_propertiesDict];
+}
+
+-(NSDictionary*) dhc_propertiesDict {
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     
     NSUInteger outCount;
@@ -37,6 +41,10 @@
 }
 
 -(NSDictionary *)iVarsDict{
+    return [self dhc_iVarsDict];
+}
+
+-(NSDictionary *)dhc_iVarsDict{
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     
     NSUInteger outCount;
@@ -62,7 +70,11 @@
     return dict;
 }
 
--(NSDictionary *)methodsDict{    
+-(NSDictionary *)methodsDict{
+    return [self dhc_methodsDict];
+}
+
+-(NSDictionary *)dhc_methodsDict{    
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     
     NSUInteger outCount;
@@ -89,10 +101,14 @@
 }
 
 -(NSDictionary *)objectIntrospectDictionary{
+    return [self dhc_objectIntrospectDictionary];
+}
 
-    NSDictionary *dict=@{@"properties" : [self propertiesDict],
-                         @"iVars" : [self iVarsDict],
-                         @"methods" : [self methodsDict]
+-(NSDictionary *)dhc_objectIntrospectDictionary{
+
+    NSDictionary *dict=@{@"properties" : [self dhc_propertiesDict],
+                         @"iVars" : [self dhc_iVarsDict],
+                         @"methods" : [self dhc_methodsDict]
                          };
             
     return dict;
