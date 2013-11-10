@@ -19,7 +19,7 @@ Since NSObject is the root class of almost any Objective-C object, it can be cal
 
 It exposes 4 methods:
 
-```
+```objective-c
 -(NSDictionary*)dhc_propertiesDict; //returns a dictionary with key-value pairs of the objects declared properties
 
 -(NSDictionary *)dhc_iVarsDict; //returns a dictionary with key-value pairs of the objects iVars
