@@ -4,16 +4,16 @@ NSObjectIntrospection
 A category on NSObject to allow for runtime introspection.
 It allows you to generate a dictionary with key value pairs of an objects properties.
 
-##Prerequisites
+## Prerequisites
 - These exensions use ARC; Hence ios4.0+
 
-##How to install
+## How to install
 
 - Drag NSObject+introspection folder into your project.  
 - `#import "NSObject+introspection.h"` wherever needed.
 
 
-##Usage
+## Usage
 
 Since NSObject is the root class of almost any Objective-C object, it can be called by almost any class you have.
 
@@ -31,11 +31,11 @@ It exposes 4 methods:
 
 ```
 
-###Usage notes
+### Usage notes
 - any property or iVar that is `nil` will be an `[NSNull null]` value for it's corresponding key.
 - any scalar properties will automatically be converted to / from their objective equivalents.
 
-##Example  
+## Example  
 SomeObject.h
 
 ```
@@ -100,6 +100,6 @@ log output
 ```
 
 
-###todo  
+### todo  
 - talk about removal of .cxx_desctruct method from methods dict, its a method on every nsobject called after dealloc
 - add some more interesting extensions :)
